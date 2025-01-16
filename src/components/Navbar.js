@@ -1,44 +1,55 @@
 import React from "react"
 import { Link } from "gatsby"
+import logo from "../images/logo.png"
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#0e0e0e] flex justify-center items-center h-16 m-0 p-[18px]">
-      <ul className="list-none flex gap-16 m-0 h-full">
-        <li>
+    <header>
+      <nav className="bg-transparent flex items-center h-16 m-0 p-[18px] justify-between">
+        <div className="flex mt-2">
           <Link
             to="/"
-            className="text-white no-underline hover:text-blue-400 focus:text-blue-600 active:text-blue-700 m-0"
+            className="text-[#ffffffee] no-underline hover:text-purple-400 focus:text-purple-600 active:text-purple-700 m-0"
           >
-            Home
+            <img src={logo} alt="Logo" className="h-10 w-auto rounded-full" />
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/projects"
-            className="text-white no-underline hover:text-blue-400 focus:text-blue-600 active:text-blue-700"
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className="text-white no-underline hover:text-blue-400 focus:text-blue-600 active:text-blue-700"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact"
-            className="text-white no-underline hover:text-blue-400 focus:text-blue-600 active:text-blue-700"
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+        </div>
+        <ul className="list-none flex gap-12 mt-6 h-full mr-5 uppercase text-sm">
+          <li>
+            <Link
+              to="/"
+              className="text-[#ffffffee] no-underline hover:text-purple-400 focus:text-purple-600 active:text-purple-700 m-0"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/projects"
+              className="text-[#ffffffee] no-underline hover:text-purple-400 focus:text-purple-600 active:text-purple-700"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="text-[#ffffffee] no-underline hover:text-purple-400 focus:text-purple-600 active:text-purple-700"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="text-[#ffffffee] no-underline hover:text-purple-400 focus:text-purple-600 active:text-purple-700"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 

@@ -1,0 +1,10 @@
+logo link
+
+add footer to all pages
+
+add "enlarge picture" to project.js
+
+STYLE:
+
+- index.js fix contact me button
+- about.js adjust gradient around pic

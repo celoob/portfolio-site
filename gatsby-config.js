@@ -7,7 +7,7 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-require("dotenv").config();
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
@@ -49,5 +49,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Poppins:400,500,700`], // Specify weights and styles
+        display: "swap",
+      },
+    },
   ],
 }
