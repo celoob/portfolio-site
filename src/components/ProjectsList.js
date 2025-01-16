@@ -4,7 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const ProjectsList = ({ limit }) => {
-  // fetch projects data with a graphql query
   const data = useStaticQuery(graphql`
     query {
       allContentfulProject(sort: { fields: updatedAt, order: DESC }) {
@@ -74,6 +73,7 @@ const ProjectsList = ({ limit }) => {
               </h2>
             </Link>
 
+            {/* description, limit amount of characters shown */}
             <p className="px-3 text-sm">
               {(() => {
                 const parsedDescription = JSON.parse(description.raw)

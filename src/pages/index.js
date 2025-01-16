@@ -11,22 +11,22 @@ export default function StartPage({ data }) {
   return (
     <div className="flex flex-col mb-10">
       <div className="relative h-[600px] w-full">
-        {/* Hero Image */}
+        {/* hero */}
         <GatsbyImage
           image={getImage(image)}
           alt="Hero Background"
           className="h-full w-full object-cover"
         />
 
-        {/* Navbar */}
+        {/* navbar */}
         <div className="absolute inset-0 z-20">
           <Navbar />
         </div>
 
-        {/* Overlay */}
+        {/* hero overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
-        {/* Content */}
+        {/* hero text */}
         <div className="absolute z-30 text-left text-white mx-[5vw] 2xl:mx-[20vw] w-[30%] top-[50%] translate-y-[-50%]">
           <h1 className="text-[5.4rem] font-bold mb-[-48px]">{title}</h1>
           <h2 className="text-[4.75rem] text-[#00000080] uppercase font-bold mb-[-18px]">
@@ -38,13 +38,17 @@ export default function StartPage({ data }) {
         </div>
       </div>
 
+      {/* lower section */}
       <div className="flex-grow">
+        {/* latest projects */}
         <h2 className="text-lg font-bold mt-2 pt-6 text-white px-[5vw] 2xl:px-[20vw]">
           Latest projects
         </h2>
         <div className="flex flex-row justify-center gap-16 p-4 px-[5vw] 2xl:px-[20vw]">
           <ProjectsList limit={4} />
         </div>
+
+        {/* contact button */}
         <div className="flex p-6 justify-center">
           <div className="pt-6 pl-1">
             <Link
@@ -60,6 +64,7 @@ export default function StartPage({ data }) {
   )
 }
 
+/* graphql query */
 export const query = graphql`
   query {
     allContentfulStartPage {

@@ -5,10 +5,10 @@ import "./layout.css"
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Main Content */}
+      {/* main content */}
       <main className="flex-grow">{children}</main>
 
-      {/* Footer */}
+      {/* footer */}
       <Footer />
     </div>
   )
