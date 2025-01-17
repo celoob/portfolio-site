@@ -8,8 +8,10 @@ export default function NotFound() {
       <Navbar />
       <div className="flex flex-col justify-center text-white text-center m-16">
         <h1 className="text-[20vh] font-bold">404</h1>
-        <h2 className="text-5xl mb-6">Page Not Found</h2>
-        <p className="mb-12">
+        <h2 className="text-5xl mb-8 mt-[-32px] text-orange-500">
+          Page Not Found
+        </h2>
+        <p className="mb-24">
           Oh no! The page you're looking for doesn't exist.
         </p>
         <Link to="/" className="text-blue-400">

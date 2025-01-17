@@ -3,6 +3,18 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Navbar from "../components/Navbar"
+import vscode from "../images/vscode.png"
+import htmlicon from "../images/html.png"
+import cssicon from "../images/css.png"
+import jsicon from "../images/js.png"
+import vueicon from "../images/vue.png"
+import reacticon from "../images/react.png"
+import tailwindicon from "../images/tailwind.png"
+import viteicon from "../images/vite.svg"
+import figmaicon from "../images/figma.png"
+import aiicon from "../images/ai.png"
+import psicon from "../images/ps.png"
+import pricon from "../images/pr.svg"
 
 export default function About({ data }) {
   const { title, description, image } = data.contentfulAbout
@@ -35,7 +47,158 @@ export default function About({ data }) {
           </div>
         </div>
       </div>
-      {/* ADD STUFF HERE IF TIME (software proficiency, coding languages etc.) */}
+
+      <div className="flex flex-col justify-center">
+        {/* SKILLS */}
+        <div className="flex border-b mx-[5vw] 2xl:mx-[20vw] border-1 border-[#00000050] mb-8">
+          <h2 className="text-xl font-bold text-[#FFFFFFE0] p-4">Skills</h2>
+        </div>
+        <div className="flex gap-12 text-white gap-40 mx-[5vw] 2xl:mx-[25vw] mb-16">
+          <div className="">
+            <div className="w-[22vw]">
+              <h3 className="text-md uppercase text-orange-400 mb-4">
+                Frontend
+              </h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-1">
+                <li>
+                  <img
+                    src={vscode}
+                    alt="vscode"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={htmlicon}
+                    alt="htmlicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={cssicon}
+                    alt="cssicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={jsicon}
+                    alt="jsicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={vueicon}
+                    alt="vueicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={reacticon}
+                    alt="reacticon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={tailwindicon}
+                    alt="tailwindicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+                <li>
+                  <img
+                    src={viteicon}
+                    alt="viteicon"
+                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-md uppercase text-orange-400 mb-4">Design</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+              <li>
+                <img
+                  src={figmaicon}
+                  alt="figmaicon"
+                  className="h-12 w-12 bg-[#00000000] object-contain p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={aiicon}
+                  alt="aiicon"
+                  className="h-12 w-12 bg-[#00000000] object-contain p-1 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={psicon}
+                  alt="psicon"
+                  className="h-12 w-12 bg-[#00000000] object-contain p-1 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={pricon}
+                  alt="pricon"
+                  className="h-12 w-12 bg-[#00000000] object-contain p-1 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* COURSES */}
+        <div className="flex border-b mx-[5vw] 2xl:mx-[20vw] border-1 border-[#00000050] mb-8">
+          <h2 className="text-xl font-bold text-[#FFFFFFE0] p-4">Courses</h2>
+        </div>
+        <div className="flex gap-12 text-white gap-40 mx-[5vw] 2xl:mx-[25vw]">
+          <div className="w-[22vw]">
+            <h3 className="text-md uppercase text-orange-400 mb-4">
+              Frontendutveckling
+            </h3>
+            <ul className="text-[#FFFFFFEF]">
+              <li>CMS</li>
+              <li>Kravarbete och kommunikation med kravställare</li>
+              <li>LIA 1</li>
+              <li>Fullstackutveckling</li>
+              <li>Agil utveckling</li>
+              <li>JavaScript med ramverk</li>
+              <li>UX & UI-design</li>
+              <li>Native JavaScript</li>
+              <li>HTML och CSS</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-md uppercase text-orange-400 mb-4">
+              Interaktionsdesigner
+            </h3>
+            <ul className="text-[#FFFFFFEF]">
+              <li>Klientbaserad Webutveckling</li>
+              <li>Grafiska verktyg</li>
+              <li>Webbteknik I</li>
+              <li>Metoder för interaktionsdesign I</li>
+              <li>Design och konceptvisualisering</li>
+              <li>Ämnesintroduktion till interaktionsdesign</li>
+              <li>Web management</li>
+              <li>Brukarorienterad design</li>
+              <li>Design av grafiska gränssnitt</li>
+              <li>Grafisk design</li>
+              <li>Metoder för interaktionsdesign II</li>
+              <li>Tillämpad interaktionsdesign</li>
+              <li>Projektarbete med vetenskapsteori</li>
+              <li>Vektorgrafik</li>
+              <li>Spelutveckling med Actionscript i Flash I</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
