@@ -20,9 +20,10 @@ export default function About({ data }) {
   const { title, description, image } = data.contentfulAbout
 
   return (
-    <div className="">
+    <div>
       <Navbar />
       <div className="flex flex-row px-[5vw] 2xl:px-[20vw] pt-8 gap-8 mb-24">
+        {/* main section */}
         <div className=" w-full border-gray-400 p-4 rounded-xl">
           <h1 className="text-4xl font-bold mb-4 text-gray-100">{title}</h1>
           <div className="mb-6 pt-4 text-gray-300">
@@ -48,77 +49,77 @@ export default function About({ data }) {
         </div>
       </div>
 
+      {/* TILL JOEL: nedan sektion hade optimalt gjorts dynamiskt från contentful, men la till denna snabbt innan redovisningen så blev hårdkodning istället */}
+      {/* lower section */}
       <div className="flex flex-col justify-center">
         {/* SKILLS */}
         <div className="flex border-b mx-[5vw] 2xl:mx-[20vw] border-1 border-[#00000050] mb-8">
           <h2 className="text-xl font-bold text-[#FFFFFFE0] p-4">Skills</h2>
         </div>
         <div className="flex gap-12 text-white gap-40 mx-[5vw] 2xl:mx-[25vw] mb-16">
-          <div className="">
-            <div className="w-[22vw]">
-              <h3 className="text-md uppercase text-orange-400 mb-4">
-                Frontend
-              </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-1">
-                <li>
-                  <img
-                    src={vscode}
-                    alt="vscode"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={htmlicon}
-                    alt="htmlicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={cssicon}
-                    alt="cssicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={jsicon}
-                    alt="jsicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={vueicon}
-                    alt="vueicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={reacticon}
-                    alt="reacticon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={tailwindicon}
-                    alt="tailwindicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-                <li>
-                  <img
-                    src={viteicon}
-                    alt="viteicon"
-                    className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
-                  />
-                </li>
-              </ul>
-            </div>
+          {/* frontend skills */}
+          <div className="w-[22vw]">
+            <h3 className="text-md uppercase text-orange-400 mb-4">Frontend</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-1">
+              <li>
+                <img
+                  src={vscode}
+                  alt="vscode"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={htmlicon}
+                  alt="htmlicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={cssicon}
+                  alt="cssicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={jsicon}
+                  alt="jsicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={vueicon}
+                  alt="vueicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={reacticon}
+                  alt="reacticon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={tailwindicon}
+                  alt="tailwindicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+              <li>
+                <img
+                  src={viteicon}
+                  alt="viteicon"
+                  className="w-12 h-12 bg-[#00000000] p-2 rounded-lg transform transition-transform duration-300 hover:scale-110"
+                />
+              </li>
+            </ul>
           </div>
+          {/* design skills */}
           <div>
             <h3 className="text-md uppercase text-orange-400 mb-4">Design</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
@@ -159,6 +160,7 @@ export default function About({ data }) {
           <h2 className="text-xl font-bold text-[#FFFFFFE0] p-4">Courses</h2>
         </div>
         <div className="flex gap-12 text-white gap-40 mx-[5vw] 2xl:mx-[25vw]">
+          {/* frontend courses */}
           <div className="w-[22vw]">
             <h3 className="text-md uppercase text-orange-400 mb-4">
               Frontendutveckling
@@ -175,10 +177,9 @@ export default function About({ data }) {
               <li>HTML och CSS</li>
             </ul>
           </div>
+          {/* ux courses */}
           <div>
-            <h3 className="text-md uppercase text-orange-400 mb-4">
-              Interaktionsdesigner
-            </h3>
+            <h3 className="text-md uppercase text-orange-400 mb-4">UI/UX</h3>
             <ul className="text-[#FFFFFFEF]">
               <li>Klientbaserad Webutveckling</li>
               <li>Grafiska verktyg</li>

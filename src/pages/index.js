@@ -27,7 +27,7 @@ export default function StartPage({ data }) {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
         {/* hero text */}
-        <div className="absolute z-30 text-left text-white mx-[5vw] 2xl:mx-[20vw] w-[30%] top-[50%] translate-y-[-50%]">
+        <div className="absolute z-30 text-left text-white mx-[5vw] 2xl:mx-[20vw] top-[50%] translate-y-[-50%]">
           <h1 className="text-[5.4rem] font-bold mb-[-48px]">{title}</h1>
           <h2 className="text-[4.75rem] text-[#00000080] uppercase font-bold mb-[-18px]">
             Portfolio

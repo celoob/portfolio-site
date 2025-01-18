@@ -10,10 +10,11 @@ export default function Contact({ data }) {
       <Navbar />
       <div className="flex flex-row px-[5vw] 2xl:px-[20vw] py-8 gap-8">
         <div className="w-full border-gray-400 p-4 rounded-xl">
+          {/* title */}
           <h1 className="text-4xl font-bold mb-4 text-gray-100">Contact Me</h1>
-
           <div className="flex w-full justify-between pt-4">
             <div>
+              {/* email */}
               <div className="text-gray-300">
                 <h5 className="text-xl font-bold mb-4">Email:</h5>
                 <div className="flex ml-2">
@@ -27,6 +28,7 @@ export default function Contact({ data }) {
                   <p className="indent-3">{email}</p>
                 </div>
               </div>
+              {/* links */}
               <div className="text-gray-300">
                 <h5 className="text-xl font-bold mb-4 mt-4">Links:</h5>
               </div>
@@ -51,6 +53,7 @@ export default function Contact({ data }) {
               </ul>
             </div>
 
+            {/* form (for show, doesnt work) */}
             <form className="space-y-4 w-[30vw] flex flex-col">
               <div>
                 <label

@@ -22,7 +22,7 @@ const ProjectsList = ({ limit }) => {
     }
   `)
 
-  // extract projects, apply limit
+  /* apply limit */
   const projects = data.allContentfulProject.nodes.slice(
     0,
     limit || data.allContentfulProject.nodes.length
@@ -35,7 +35,7 @@ const ProjectsList = ({ limit }) => {
           key={title}
           className="bg-[#00000040] h-60 text-gray-100 flex flex-col justify-between rounded-xl shadow-md"
         >
-          <div>
+          <div className="">
             {image ? (
               <Link
                 to={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}
@@ -93,7 +93,7 @@ const ProjectsList = ({ limit }) => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline relative bottom-9 left-56"
+                className="text-blue-500 hover:underline relative bottom-9 right-4 flex justify-end"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
